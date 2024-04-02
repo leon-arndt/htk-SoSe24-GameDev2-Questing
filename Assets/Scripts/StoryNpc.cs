@@ -7,6 +7,12 @@ public class StoryNpc : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        FindObjectOfType<StoryView>(true).StartStory(story);
+        var storyView = FindObjectOfType<StoryView>(true);
+        if (storyView.isActiveAndEnabled)
+        {
+            return;
+        }
+
+        storyView.StartStory(story);
     }
 }
