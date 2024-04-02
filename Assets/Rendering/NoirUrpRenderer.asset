@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  injectionPoint: 600
+  injectionPoint: 450
   fetchColorBuffer: 1
-  requirements: 0
+  requirements: -1
   passMaterial: {fileID: 2100000, guid: 26f51829c05ab4987a0202bb72ad13f0, type: 2}
   passIndex: 0
-  bindDepthStencilAttachment: 0
+  bindDepthStencilAttachment: 1
   m_Version: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -70,11 +70,11 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_DefaultStencilState:
     overrideStencilState: 0
-    stencilReference: 0
-    stencilCompareFunction: 8
-    passOperation: 2
-    failOperation: 0
-    zFailOperation: 0
+    stencilReference: 1
+    stencilCompareFunction: 5
+    passOperation: 0
+    failOperation: 2
+    zFailOperation: 4
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_DepthPrimingMode: 0
