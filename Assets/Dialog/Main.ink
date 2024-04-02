@@ -10,7 +10,9 @@ Slim: There was an accident.
 
 === AskWhatSee ===
 Slim: Two space ships crashed into each other. There was a corrupt business man on that ship. Collect the illegal documents from the briefcase so we can put that thug behind bars. Be careful of the corrupt police drones.
- ~ addQuest("Documents")
+
+~ addQuest("Documents")
+
 -> END
 
 === Cancel ===
