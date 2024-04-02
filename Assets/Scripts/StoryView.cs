@@ -27,6 +27,11 @@ public class StoryView : MonoBehaviour
         if (OnCreateStory != null) OnCreateStory(story);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        
+        story.BindExternalFunction ("addQuest", (string questName) => {
+            FindObjectOfType<QuestLogView>().Add(questName);
+        });
+        
         RefreshView();
     }
 

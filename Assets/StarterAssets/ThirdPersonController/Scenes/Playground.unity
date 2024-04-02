@@ -1735,7 +1735,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234d7e2109254a03895eafecad8c2fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 11400000, guid: 4e944e449e9f24144b15bfb9b23cf174, type: 2}
+  activeQuests: []
   questsHolder: {fileID: 1294720106}
+  questViewPrefab: {fileID: 2996638619666927906, guid: 084bcdfc206924f6f89d9b469bd41293,
+    type: 3}
 --- !u!1 &381606253
 GameObject:
   m_ObjectHideFlags: 0
