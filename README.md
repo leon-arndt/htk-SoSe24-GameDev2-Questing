@@ -6,6 +6,7 @@ Female astronaut model: https://sketchfab.com/3d-models/dark-astronaut-1b2d325ed
 Repair bay: https://sketchfab.com/3d-models/yoyodyne-robotics-mini-bot-factory-repair-bay-a7739de74f5e499dbda791ec3a90cfb5
 Engine room: https://sketchfab.com/3d-models/tf-ds-engineering-cd0f4b757eb143bcaaa69104cf54462c
 Truck; https://sketchfab.com/3d-models/zaz-968-lowpoly-8793fbfe9ec94110bbf6cca3a71d81c3
+Police Car: https://sketchfab.com/3d-models/opel-astra-g-2003-lowpoly-fd022c749fb0482e86a19cf06607fe2b
 
 ## Music
 https://freesound.org/people/LightMister/sounds/690294/
