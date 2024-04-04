@@ -13,6 +13,12 @@ public class Vehicle : MonoBehaviour
     private void Start()
     {
         agent.speed *= UnityEngine.Random.Range(1f, maxRandomSpeedMultiplier);
+        Destroy(gameObject, 50f);
+
+        if (Random.value > 0.5f)
+        {
+            direction *= -1f;
+        }
     }
 
     private void Update()
