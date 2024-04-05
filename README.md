@@ -12,3 +12,5 @@ Police Car: https://sketchfab.com/3d-models/opel-astra-g-2003-lowpoly-fd022c749f
 https://freesound.org/people/LightMister/sounds/690294/
 https://freesound.org/people/Andrewkn/sounds/726573/
 
+## Sprites & Textures
+Public domain blood stain: https://www.publicdomainpictures.net/en/view-image.php?image=484198&picture=blood-splatter-background-clipart
