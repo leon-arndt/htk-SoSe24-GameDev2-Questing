@@ -2,6 +2,7 @@ using System;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class StoryView : MonoBehaviour
@@ -22,6 +23,7 @@ public class StoryView : MonoBehaviour
 
     public void StartStory(TextAsset textAsset)
     {
+        FindObjectOfType<PlayerInput>().enabled = false;
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
         if (OnCreateStory != null) OnCreateStory(story);
@@ -68,6 +70,7 @@ public class StoryView : MonoBehaviour
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 gameObject.SetActive(false);
+                FindObjectOfType<PlayerInput>().enabled = true;
             });
         }
     }
