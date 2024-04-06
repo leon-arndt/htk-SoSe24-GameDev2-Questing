@@ -9,6 +9,7 @@ Truck; https://sketchfab.com/3d-models/zaz-968-lowpoly-8793fbfe9ec94110bbf6cca3a
 Police Car: https://sketchfab.com/3d-models/opel-astra-g-2003-lowpoly-fd022c749fb0482e86a19cf06607fe2b
 Drone: https://sketchfab.com/3d-models/mech-drone-8d06874aac5246c59edb4adbe3606e0e
 Barrel: https://sketchfab.com/3d-models/sci-fi-barrel-481f7499eaf64b8792bffc59a8b4e05a#download
+Computer Case: https://sketchfab.com/3d-models/sci-fi-computer-43f296dbc51b40e2b80cb90698c2837b
 
 ## Music
 https://freesound.org/people/LightMister/sounds/690294/
