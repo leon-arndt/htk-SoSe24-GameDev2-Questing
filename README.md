@@ -8,6 +8,7 @@ Engine room: https://sketchfab.com/3d-models/tf-ds-engineering-cd0f4b757eb143bca
 Truck; https://sketchfab.com/3d-models/zaz-968-lowpoly-8793fbfe9ec94110bbf6cca3a71d81c3
 Police Car: https://sketchfab.com/3d-models/opel-astra-g-2003-lowpoly-fd022c749fb0482e86a19cf06607fe2b
 Drone: https://sketchfab.com/3d-models/mech-drone-8d06874aac5246c59edb4adbe3606e0e
+Barrel: https://sketchfab.com/3d-models/sci-fi-barrel-481f7499eaf64b8792bffc59a8b4e05a#download
 
 ## Music
 https://freesound.org/people/LightMister/sounds/690294/
