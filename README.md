@@ -5,11 +5,13 @@ Doctor model: https://sketchfab.com/3d-models/the-doctortorturer-animated-77e50a
 Female astronaut model: https://sketchfab.com/3d-models/dark-astronaut-1b2d325edc814d068e920add2ecc8a32
 Repair bay: https://sketchfab.com/3d-models/yoyodyne-robotics-mini-bot-factory-repair-bay-a7739de74f5e499dbda791ec3a90cfb5
 Engine room: https://sketchfab.com/3d-models/tf-ds-engineering-cd0f4b757eb143bcaaa69104cf54462c
-Truck; https://sketchfab.com/3d-models/zaz-968-lowpoly-8793fbfe9ec94110bbf6cca3a71d81c3
+Truck: https://sketchfab.com/3d-models/zaz-968-lowpoly-8793fbfe9ec94110bbf6cca3a71d81c3
 Police Car: https://sketchfab.com/3d-models/opel-astra-g-2003-lowpoly-fd022c749fb0482e86a19cf06607fe2b
 Drone: https://sketchfab.com/3d-models/mech-drone-8d06874aac5246c59edb4adbe3606e0e
 Barrel: https://sketchfab.com/3d-models/sci-fi-barrel-481f7499eaf64b8792bffc59a8b4e05a#download
 Computer Case: https://sketchfab.com/3d-models/sci-fi-computer-43f296dbc51b40e2b80cb90698c2837b
+Scifi Car: https://sketchfab.com/3d-models/sci-fi-car-8908f2ae16954d89866f12cd55c84ed9#download
+Flying Niva: https://sketchfab.com/3d-models/flying-niva-7c94bf02d9184861b148ae2dcc46d2a2#download
 
 ## Music
 https://freesound.org/people/LightMister/sounds/690294/
