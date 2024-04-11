@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 
@@ -6,8 +7,8 @@ public class QuestStatusView : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI questStatusText;
 
-    public void Set(CollectionQuest questName)
+    public void Set(IQuest questName)
     {
-        questStatusText.text = questName.displayName;
+        questStatusText.text = questName.GetDisplayName();
     }
 }

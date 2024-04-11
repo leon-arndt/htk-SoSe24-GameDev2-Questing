@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using DefaultNamespace;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
@@ -14,6 +16,7 @@ public class StoryView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
+    [SerializeField] private QuestsConfig questConfig;
 
     private void Awake()
     {
@@ -26,14 +29,22 @@ public class StoryView : MonoBehaviour
         FindObjectOfType<PlayerInput>().enabled = false;
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
+        var items = GameState.GetAllItems();
+        foreach (var itemAmount in items)
+        {
+            story.variablesState["item_" + itemAmount.Key.name] = itemAmount.Value;
+        }
+
+        var finishedQuests = GameState.GetFinishedQuests();
+        foreach (var itemAmount in finishedQuests)
+        {
+            story.variablesState["finished_" + itemAmount.GetId()] = "true";
+        }
+
         if (OnCreateStory != null) OnCreateStory(story);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        
-        story.BindExternalFunction ("addQuest", (string questName) => {
-            FindObjectOfType<QuestLogView>().Add(questName);
-        });
-        
+
         RefreshView();
     }
 
@@ -50,6 +61,7 @@ public class StoryView : MonoBehaviour
             text = text.Trim();
             // Display the text on screen!
             CreateContentView(text);
+            HandleTags();
         }
 
         if (story.currentChoices.Count > 0)
@@ -72,6 +84,34 @@ public class StoryView : MonoBehaviour
                 gameObject.SetActive(false);
                 FindObjectOfType<PlayerInput>().enabled = true;
             });
+        }
+    }
+
+    private void HandleTags()
+    {
+        if (story.currentTags.Count <= 0)
+        {
+            return;
+        }
+
+        foreach (var currentTag in story.currentTags)
+        {
+            if (currentTag.Contains("addQuest"))
+            {
+                var questName = currentTag.Split(' ')[1];
+                var quest = questConfig.quests.First(q => q.GetId() == questName);
+                GameState.AddQuest(quest);
+                FindObjectOfType<QuestLogView>().Refresh();
+            }
+
+            if (currentTag.Contains("removeQuest"))
+            {
+                var questName = currentTag.Split(' ')[1];
+                var quests = GameState.GetActiveQuests();
+                var quest = quests.First(q => q.GetId() == questName);
+                GameState.RemoveQuest(quest);
+                FindObjectOfType<QuestLogView>().Refresh();
+            }
         }
     }
 

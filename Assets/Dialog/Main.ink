@@ -4,7 +4,8 @@
     -> AskWhatSee
 * "I don't care"
     -> Cancel
-
+* {finished_computer} "I found the computer"
+    -> FoundComputer
 
 === AskWhatSee ===
 # addQuest Computer
@@ -15,3 +16,8 @@ Slim: Two space ships crashed into each other. There was a corrupt business man 
 === Cancel ===
 Slim: Talk to me again when you do care.
 -> END
+
+=== FoundComputer ===
+# removeQuest Computer
+Slim: Good job. I'll take that from you.
+    -> END
