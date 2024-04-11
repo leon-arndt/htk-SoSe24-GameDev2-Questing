@@ -1,6 +1,4 @@
-﻿EXTERNAL addQuest(questName)
-
-Slim: There was an accident.
+﻿Slim: There was an accident.
 
 * "What did you see?"
     -> AskWhatSee
@@ -9,9 +7,8 @@ Slim: There was an accident.
 
 
 === AskWhatSee ===
+# addQuest Computer
 Slim: Two space ships crashed into each other. There was a corrupt business man on that ship. Collect his briefcase computer as evidence so we can put that thug behind bars. Be careful of the corrupt police drones.
-
-~ addQuest("Computer")
 
 -> END
 
