@@ -5,8 +5,13 @@ public class QuestLogView : MonoBehaviour
     [SerializeField] private RectTransform questsHolder;
     [SerializeField] private QuestStatusView questViewPrefab;
 
-    public void Refresh()
+    public void ShowActiveQuests()
     {
+        foreach (Transform child in questsHolder)
+        {
+            Destroy(child.gameObject);
+        }
+
         var activeQuests = GameState.GetActiveQuests();
         foreach (var quest in activeQuests)
         {

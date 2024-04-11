@@ -29,17 +29,14 @@ public class StoryView : MonoBehaviour
         FindObjectOfType<PlayerInput>().enabled = false;
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
-        var items = GameState.GetAllItems();
-        foreach (var itemAmount in items)
-        {
-            story.variablesState["item_" + itemAmount.Key.name] = itemAmount.Value;
-        }
 
         var finishedQuests = GameState.GetFinishedQuests();
-        foreach (var itemAmount in finishedQuests)
+        if (finishedQuests.Any(x => x.GetId() == "computer"))
         {
-            story.variablesState["finished_" + itemAmount.GetId()] = "true";
+            story.variablesState["finished_computer"] = true;
         }
+        
+
 
         if (OnCreateStory != null) OnCreateStory(story);
         Cursor.visible = true;
@@ -101,7 +98,7 @@ public class StoryView : MonoBehaviour
                 var questName = currentTag.Split(' ')[1];
                 var quest = questConfig.quests.First(q => q.GetId() == questName);
                 GameState.AddQuest(quest);
-                FindObjectOfType<QuestLogView>().Refresh();
+                FindObjectOfType<QuestLogView>().ShowActiveQuests();
             }
 
             if (currentTag.Contains("removeQuest"))
@@ -110,7 +107,7 @@ public class StoryView : MonoBehaviour
                 var quests = GameState.GetActiveQuests();
                 var quest = quests.First(q => q.GetId() == questName);
                 GameState.RemoveQuest(quest);
-                FindObjectOfType<QuestLogView>().Refresh();
+                FindObjectOfType<QuestLogView>().ShowActiveQuests();
             }
         }
     }

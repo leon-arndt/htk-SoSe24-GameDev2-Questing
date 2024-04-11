@@ -48,7 +48,7 @@ public class GameState : MonoBehaviour
         return instance.finishedQuests;
     }
     
-    public static IReadOnlyList<IQuest> GetActiveQuests()
+        public static IReadOnlyList<IQuest> GetActiveQuests()
     {
         var instance = FindObjectOfType<GameState>();
         return instance.activeQuests;

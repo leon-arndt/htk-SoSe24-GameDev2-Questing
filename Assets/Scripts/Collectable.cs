@@ -13,6 +13,7 @@ public class Collectable : MonoBehaviour, IInteractable
         GameState.AddItem(type, amount);
 
         UpdateQuests();
+        Destroy(gameObject);
     }
 
     private void UpdateQuests()
