@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 143048212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -1619,10 +1619,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildAlignment: 4
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   choiceHolder: {fileID: 143048213}
   storyText: {fileID: 271138458}
   speakerName: {fileID: 867016785}
-  buttonPrefab: {fileID: 2979589233998023818, guid: f918adfb8166e44ca9099bf9e4a0e54c,
+  buttonPrefab: {fileID: 2979589233998023818, guid: be19a274d03044d39882c243a25943be,
     type: 3}
 --- !u!114 &198768206
 MonoBehaviour:
@@ -14260,7 +14260,7 @@ GameObject:
   - component: {fileID: 1284275106}
   - component: {fileID: 1284275105}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InGameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
