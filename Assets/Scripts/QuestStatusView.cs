@@ -8,6 +8,6 @@ public class QuestStatusView : MonoBehaviour
 
     public void Set(CollectionQuest questName)
     {
-        questStatusText.text = questName.name;
+        questStatusText.text = questName.displayName;
     }
 }
