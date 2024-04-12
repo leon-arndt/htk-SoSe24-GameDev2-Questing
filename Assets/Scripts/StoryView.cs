@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using DefaultNamespace;
 using Ink.Runtime;
@@ -117,12 +118,28 @@ public class StoryView : MonoBehaviour
         if (parts.Length >= 2)
         {
             speakerName.text = parts[0];
-            storyText.text = parts[1];
+            StartCoroutine(ShowTextLetterByLetter(storyText, parts[1]));
         }
         else
         {
             speakerName.text = string.Empty;
-            storyText.text = text;
+            StartCoroutine(ShowTextLetterByLetter(storyText, text));
+        }
+    }
+
+    IEnumerator ShowTextLetterByLetter(TextMeshProUGUI target, string text)
+    {
+        storyText.text = text;
+        storyText.maxVisibleCharacters = 0;
+        for (int i = 0; i < text.Length; i++)
+        {
+            storyText.maxVisibleCharacters = i;
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                storyText.maxVisibleCharacters = text.Length;
+                yield break;
+            }
+            yield return new WaitForSeconds(0.025f);
         }
     }
 
