@@ -21,11 +21,11 @@ public class Collectable : MonoBehaviour, IInteractable
         var activeQuests = GameState.GetActiveQuests();
         foreach (var quest in activeQuests)
         {
-            if (quest is CollectionQuest collectionQuest && collectionQuest.Type == type)
+            if (quest is CollectionQuest collectionQuest && collectionQuest.type == type)
             {
                 if (GameState.GetAllItems().TryGetValue(type, out var itemAmount))
                 {
-                    if (itemAmount >= collectionQuest.Amount)
+                    if (itemAmount >= collectionQuest.amount)
                     {
                         GameState.FinishQuest(collectionQuest);
                     }

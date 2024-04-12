@@ -5,8 +5,8 @@ using UnityEngine;
 public class CollectionQuest : ScriptableObject, IQuest
 {
     public string displayName;
-    [field: SerializeField] public ItemType Type { get; }
-    [field: SerializeField] public uint Amount { get; } = 1;
+    public ItemType type;
+    public uint amount = 1;
 
     public string GetId()
     {

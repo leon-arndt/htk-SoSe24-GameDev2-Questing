@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ad65fa61f9428ea7443dd208d08ebc, type: 3}
-  m_Name: AllQuests
+  m_Script: {fileID: 11500000, guid: 858b41307ac984d33aed1caeec7926c2, type: 3}
+  m_Name: Passport
   m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: 4e944e449e9f24144b15bfb9b23cf174, type: 2}
-  - {fileID: 11400000, guid: eac39362d14fb460b8f3241d8111eea7, type: 2}

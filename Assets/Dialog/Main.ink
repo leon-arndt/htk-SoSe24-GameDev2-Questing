@@ -1,4 +1,6 @@
-﻿Slim: There was an accident.
+﻿VAR finished_computer = false
+
+Slim: There was an accident.
 
 * "What did you see?"
     -> AskWhatSee
