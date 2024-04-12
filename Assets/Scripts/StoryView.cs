@@ -44,6 +44,14 @@ public class StoryView : MonoBehaviour
 
         RefreshView();
     }
+    
+    private void CloseStory()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        gameObject.SetActive(false);
+        FindObjectOfType<PlayerInput>().enabled = true;
+    }
 
     private void RefreshView()
     {
@@ -74,13 +82,7 @@ public class StoryView : MonoBehaviour
         else
         {
             Button choice = CreateChoiceView("Continue");
-            choice.onClick.AddListener(() =>
-            {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                gameObject.SetActive(false);
-                FindObjectOfType<PlayerInput>().enabled = true;
-            });
+            choice.onClick.AddListener(CloseStory);
         }
     }
 
