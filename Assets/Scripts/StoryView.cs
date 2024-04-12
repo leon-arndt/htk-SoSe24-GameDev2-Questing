@@ -16,7 +16,7 @@ public class StoryView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
-    [SerializeField] private QuestsConfig questConfig;
+    // TODO add later [SerializeField] private QuestsConfig questConfig;
 
     private void Awake()
     {
@@ -77,6 +77,7 @@ public class StoryView : MonoBehaviour
         }
     }
 
+    /* TODO: add later
     private void HandleTags()
     {
         if (story.currentTags.Count <= 0)
@@ -104,6 +105,7 @@ public class StoryView : MonoBehaviour
             }
         }
     }
+    */
 
     private void OnClickChoiceButton(Choice choice)
     {
