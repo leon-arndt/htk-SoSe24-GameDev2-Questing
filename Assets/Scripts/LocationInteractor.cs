@@ -3,11 +3,14 @@ using UnityEngine;
 public class LocationInteractor : MonoBehaviour
 {
     
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
-            interactable.Interact();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                interactable.Interact();
+            }
         }
     }
 }
