@@ -1,3 +1,4 @@
+using System;
 using Events;
 using UniRx;
 using UnityEngine;
@@ -10,7 +11,15 @@ public class LocationInteractor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            currentInteractable?.Interact();
+            try
+            {
+                // try using the interactable
+                currentInteractable.Interact();
+            }
+            catch (Exception e)
+            {
+                // sometimes the interactable is null (if it was destroyed)
+            }
         }
     }
 
