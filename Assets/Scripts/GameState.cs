@@ -17,7 +17,7 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public static bool RemoveItem(ItemType type, uint amount)
+    public static bool TryRemoveItem(ItemType type, uint amount)
     {
         var instance = FindObjectOfType<GameState>();
         if (instance.items.TryGetValue(type, out var ownedAmount))
@@ -34,6 +34,17 @@ public class GameState : MonoBehaviour
         return false;
     }
 
+    public static bool HasEnoughItems(ItemType type, uint amount)
+    {
+        var instance = FindObjectOfType<GameState>();
+        if (instance.items.TryGetValue(type, out var ownedAmount))
+        {
+            return ownedAmount >= amount;
+        }
+
+        return false;
+    }
+    
     public static IReadOnlyDictionary<ItemType, uint> GetAllItems()
     {
         var instance = FindObjectOfType<GameState>();
