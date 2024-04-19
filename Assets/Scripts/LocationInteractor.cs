@@ -1,3 +1,5 @@
+using Events;
+using UniRx;
 using UnityEngine;
 
 public class LocationInteractor : MonoBehaviour
@@ -17,6 +19,7 @@ public class LocationInteractor : MonoBehaviour
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
             currentInteractable = interactable;
+            MessageBroker.Default.Publish(new InteractionPossibilitiesUpdated(currentInteractable));
         }
     }
     
@@ -27,6 +30,7 @@ public class LocationInteractor : MonoBehaviour
             if (currentInteractable == interactable)
             {
                 currentInteractable = null;
+                MessageBroker.Default.Publish(new InteractionPossibilitiesUpdated(currentInteractable));
             }
         }
     }
