@@ -1276,8 +1276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 0
-  canPush: 0
+    m_Bits: 4294967295
+  canPush: 1
   strength: 1.1
 --- !u!114 &135756642000475821
 MonoBehaviour:
