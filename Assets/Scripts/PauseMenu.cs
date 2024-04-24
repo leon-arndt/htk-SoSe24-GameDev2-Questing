@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         pausePanel.SetActive(false);
-        continueButton.onClick.AddListener(_  => SetPausedStatus(false));
+        continueButton.onClick.AddListener(()  => SetPausedStatus(false));
     }
 
     private void Update()
