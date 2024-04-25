@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using DefaultNamespace;
+using DG.Tweening;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
@@ -66,14 +67,14 @@ public class StoryView : MonoBehaviour
             for (int i = 0; i < story.currentChoices.Count; i++)
             {
                 Choice choice = story.currentChoices[i];
-                Button button = CreateChoiceView(choice.text.Trim());
+                Button button = CreateChoiceView(choice.text.Trim(), i);
                 // Tell the button what to do when we press it
                 button.onClick.AddListener( () => OnClickChoiceButton(choice));
             }
         }
         else
         {
-            Button choice = CreateChoiceView("Continue");
+            Button choice = CreateChoiceView("Continue", 0);
             choice.onClick.AddListener(CloseStory);
         }
     }
@@ -151,9 +152,10 @@ public class StoryView : MonoBehaviour
         }
     }
     
-    private Button CreateChoiceView(string text)
+    private Button CreateChoiceView(string text, int index)
     {
         var choice = Instantiate(buttonPrefab, choiceHolder.transform, false);
+        choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
 
         var choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
         choiceText.text = text;
