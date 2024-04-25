@@ -19,7 +19,8 @@ public class StoryView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
     [SerializeField] private QuestsConfig questConfig;
-
+    [SerializeField] private GameObject normalHudGroup;
+    
     private void Awake()
     {
         DestroyOldChoices();
@@ -28,6 +29,7 @@ public class StoryView : MonoBehaviour
 
     public void StartStory(TextAsset textAsset)
     {
+        normalHudGroup.SetActive(false);
         FindObjectOfType<PlayerInput>().enabled = false;
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
@@ -43,6 +45,7 @@ public class StoryView : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
+        normalHudGroup.SetActive(true);
         FindObjectOfType<PlayerInput>().enabled = true;
     }
 
