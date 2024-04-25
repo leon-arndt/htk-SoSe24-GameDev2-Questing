@@ -37,6 +37,12 @@ public class StoryView : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
+        foreach (var quest in GameState.GetFinishedQuests())
+        {
+            story.variablesState["finished_"+quest.GetId().ToLower()] = true;
+
+        }
+        
         ShowStory();
     }
     
@@ -62,7 +68,7 @@ public class StoryView : MonoBehaviour
             text = text.Trim();
             // Display the text on screen!
             CreateContentView(text);
-            // HandleTags(); //TODO: tags kommen später
+            HandleTags();
         }
 
         if (story.currentChoices.Count > 0)
@@ -96,7 +102,7 @@ public class StoryView : MonoBehaviour
                 var questName = currentTag.Split(' ')[1];
                 var quest = questConfig.quests.First(q => q.GetId() == questName);
                 GameState.AddQuest(quest);
-                FindObjectOfType<QuestLogView>().ShowActiveQuests();
+                FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
 
             if (currentTag.Contains("removeQuest"))
@@ -105,7 +111,7 @@ public class StoryView : MonoBehaviour
                 var quests = GameState.GetActiveQuests();
                 var quest = quests.First(q => q.GetId() == questName);
                 GameState.RemoveQuest(quest);
-                FindObjectOfType<QuestLogView>().ShowActiveQuests();
+                FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
         }
     }
