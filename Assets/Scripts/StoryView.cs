@@ -164,6 +164,10 @@ public class StoryView : MonoBehaviour
     private Button CreateChoiceView(string text, int index)
     {
         var choice = Instantiate(buttonPrefab, choiceHolder.transform, false);
+        if (index == 0)
+        {
+            choice.Select();
+        }
         choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
 
         var choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
