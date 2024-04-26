@@ -1,4 +1,5 @@
 using System.Linq;
+using UnityEngine;
 
 public static class QuestSystem
 {
@@ -18,5 +19,7 @@ public static class QuestSystem
                 }
             }   
         }
+        
+        Object.FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
     }
 }
