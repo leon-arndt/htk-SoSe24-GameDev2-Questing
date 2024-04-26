@@ -23,5 +23,5 @@ Suit yourself. Let me know if you change your mind.
 === FoundPassport ===
 
 removeQuest FindPassport
-Excellent work. Hand it over to me.
+Astronaut: Excellent work. Hand it over to me.
 -> END

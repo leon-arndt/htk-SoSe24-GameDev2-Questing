@@ -50,7 +50,6 @@ public class StoryView : MonoBehaviour
         foreach (var quest in GameState.GetCompletableQuests())
         {
             story.variablesState["finished_"+quest.Quest.GetId().ToLower()] = true;
-
         }
         
         ShowStory();
@@ -135,28 +134,28 @@ public class StoryView : MonoBehaviour
         var speaker = story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[1];
         speakerName.text = speaker;
         speakerImage.sprite = GetSpeakerImage(speaker);
-        StartCoroutine(ShowTextLetterByLetter(storyText, text));
+        StartCoroutine(ShowTextLetterByLetter(text));
     }
 
-    private Sprite GetSpeakerImage(string speaker)
-    {
-        return speakerConfigs.FirstOrDefault(s => s.name == speaker)?.sprite;
-    }
-
-    IEnumerator ShowTextLetterByLetter(TextMeshProUGUI target, string text)
+    IEnumerator ShowTextLetterByLetter(string text)
     {
         storyText.text = text;
         storyText.maxVisibleCharacters = 0;
-        for (int i = 0; i < text.Length; i++)
+        for (int i = 0; i <= text.Length; i++)
         {
             storyText.maxVisibleCharacters = i;
-            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame) // TODO: support joysticks also
             {
                 storyText.maxVisibleCharacters = text.Length;
                 yield break;
             }
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.025f); // wir könnten auch 1 sekunde warten, das wäre sehr langsam
         }
+    }
+    
+    private Sprite GetSpeakerImage(string speaker)
+    {
+        return speakerConfigs.FirstOrDefault(s => s.name == speaker)?.sprite;
     }
 
     private void DestroyOldChoices()
@@ -173,6 +172,7 @@ public class StoryView : MonoBehaviour
         if (index == 0)
         {
             choice.Select();
+            choice.navigation = new Navigation {mode = Navigation.Mode.Vertical, selectOnDown = choice};
         }
         choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
 
