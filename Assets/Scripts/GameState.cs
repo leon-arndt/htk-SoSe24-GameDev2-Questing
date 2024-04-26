@@ -56,6 +56,13 @@ public class GameState : MonoBehaviour
     public static void StartQuest(IQuest quest)
     {
         var instance = FindObjectOfType<GameState>();
+        
+        if (instance.questStates.Any(q => q.Quest.GetId() == quest.GetId()))
+        {
+            Debug.LogWarning($"Quest{quest.GetId()} already started - not starting it again");
+            return;
+        }
+        
         var state = new QuestState()
         {
             Quest = quest,
