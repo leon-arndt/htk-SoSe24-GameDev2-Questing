@@ -5,10 +5,11 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Button continueButton;
+
     private void Awake()
     {
         pausePanel.SetActive(false);
-        continueButton.onClick.AddListener(()  => SetPausedStatus(false));
+        continueButton.onClick.AddListener(() => SetPausedStatus(false));
     }
 
     private void Update()

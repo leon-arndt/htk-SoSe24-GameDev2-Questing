@@ -1,4 +1,5 @@
-﻿VAR finished_computer = false
+﻿# speaker: Slim
+VAR finished_computer = false
 
 Slim: There was an accident.
 
@@ -11,15 +12,15 @@ Slim: There was an accident.
 
 === AskWhatSee ===
 # addQuest Computer
-Slim: Two space ships crashed into each other. There was a corrupt business man on that ship. Collect his briefcase computer as evidence so we can put that thug behind bars. Be careful of the corrupt police drones.
+Two space ships crashed into each other. There was a corrupt business man on that ship. Collect his briefcase computer as evidence so we can put that thug behind bars. Be careful of the corrupt police drones.
 
 -> END
 
 === Cancel ===
-Slim: Talk to me again when you do care.
+Talk to me again when you do care.
 -> END
 
 === FoundComputer ===
 # removeQuest Computer
-Slim: Good job. I'll take that from you.
+Good job. I'll take that from you.
     -> END

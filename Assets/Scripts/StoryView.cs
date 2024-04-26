@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
 using DG.Tweening;
@@ -17,7 +18,17 @@ public class StoryView : MonoBehaviour
     [SerializeField] private Button buttonPrefab;
     [SerializeField] private QuestsConfig questConfig;
     [SerializeField] private GameObject normalHudGroup;
- 
+    [SerializeField] private Image speakerImage;
+    
+    [SerializeField] private List<SpeakerConfig> speakerConfigs;
+
+    [Serializable]
+    public class SpeakerConfig
+    {
+        public string name;
+        public Sprite sprite;
+    }
+
     private Story story;
 
     private void Awake()
@@ -121,17 +132,15 @@ public class StoryView : MonoBehaviour
 
     private void CreateContentView(string text)
     {
-        string[] parts = text.Split(':');
-        if (parts.Length >= 2)
-        {
-            speakerName.text = parts[0];
-            StartCoroutine(ShowTextLetterByLetter(storyText, parts[1]));
-        }
-        else
-        {
-            speakerName.text = string.Empty;
-            StartCoroutine(ShowTextLetterByLetter(storyText, text));
-        }
+        var speaker = story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[1];
+        speakerName.text = speaker;
+        speakerImage.sprite = GetSpeakerImage(speaker);
+        StartCoroutine(ShowTextLetterByLetter(storyText, text));
+    }
+
+    private Sprite GetSpeakerImage(string speaker)
+    {
+        return speakerConfigs.FirstOrDefault(s => s.name == speaker)?.sprite;
     }
 
     IEnumerator ShowTextLetterByLetter(TextMeshProUGUI target, string text)

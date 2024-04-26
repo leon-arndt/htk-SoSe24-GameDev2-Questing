@@ -6,7 +6,7 @@ public class SceneOpenerButton : MonoBehaviour
 {
     [SerializeField]
     private int buildIndex;
-    
+
     private void Awake()
     {
         GetComponent<Button>().onClick.AddListener(LoadScene);
@@ -14,6 +14,7 @@ public class SceneOpenerButton : MonoBehaviour
 
     private void LoadScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(buildIndex);
     }
 }
