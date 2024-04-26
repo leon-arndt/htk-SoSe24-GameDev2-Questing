@@ -11,16 +11,15 @@ using UnityEngine.UI;
 
 public class StoryView : MonoBehaviour
 {
-    public static event Action<Story> OnCreateStory;
-    private Story story;
-
     [SerializeField] private RectTransform choiceHolder;
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
     [SerializeField] private QuestsConfig questConfig;
     [SerializeField] private GameObject normalHudGroup;
-    
+ 
+    private Story story;
+
     private void Awake()
     {
         DestroyOldChoices();
@@ -37,9 +36,9 @@ public class StoryView : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        foreach (var quest in GameState.GetFinishedQuests())
+        foreach (var quest in GameState.GetCompletableQuests())
         {
-            story.variablesState["finished_"+quest.GetId().ToLower()] = true;
+            story.variablesState["finished_"+quest.Quest.GetId().ToLower()] = true;
 
         }
         
@@ -101,16 +100,14 @@ public class StoryView : MonoBehaviour
             {
                 var questName = currentTag.Split(' ')[1];
                 var quest = questConfig.quests.First(q => q.GetId() == questName);
-                GameState.AddQuest(quest);
+                GameState.StartQuest(quest);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
 
             if (currentTag.Contains("removeQuest"))
             {
                 var questName = currentTag.Split(' ')[1];
-                var quests = GameState.GetActiveQuests();
-                var quest = quests.First(q => q.GetId() == questName);
-                GameState.RemoveQuest(quest);
+                GameState.RemoveQuest(questName);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
         }

@@ -16,7 +16,7 @@ public class QuestLogView : MonoBehaviour
         foreach (var quest in activeQuests)
         {
             var questView = Instantiate(questViewPrefab, questsHolder);
-            questView.Set(quest);
+            questView.Set(quest.Quest);
         }
     }
 }
