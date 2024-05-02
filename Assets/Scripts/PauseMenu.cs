@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,11 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(false);
         continueButton.onClick.AddListener(() => SetPausedStatus(false));
+    }
+
+    private void OnEnable()
+    {
+        continueButton.Select();
     }
 
     private void Update()
