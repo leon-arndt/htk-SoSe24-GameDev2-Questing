@@ -1,7 +1,7 @@
 ﻿# speaker: Slim
 VAR finished_computer = false
 
-Slim: There was an accident.
+There was an accident.
 
 * "What did you see?"
     -> AskWhatSee
