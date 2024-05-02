@@ -7,6 +7,7 @@ using DG.Tweening;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -21,6 +22,8 @@ public class StoryView : MonoBehaviour
     [SerializeField] private Image speakerImage;
     
     [SerializeField] private List<SpeakerConfig> speakerConfigs;
+
+    private UnityAction _onFinished;
 
     [Serializable]
     public class SpeakerConfig
@@ -37,8 +40,9 @@ public class StoryView : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void StartStory(TextAsset textAsset)
+    public void StartStory(TextAsset textAsset, UnityAction onFinished)
     {
+        _onFinished = onFinished;
         normalHudGroup.SetActive(false);
         FindObjectOfType<PlayerInput>().enabled = false;
         gameObject.SetActive(true);
@@ -62,6 +66,7 @@ public class StoryView : MonoBehaviour
         gameObject.SetActive(false);
         normalHudGroup.SetActive(true);
         FindObjectOfType<PlayerInput>().enabled = true;
+        _onFinished?.Invoke();
     }
 
     private void ShowStory()
