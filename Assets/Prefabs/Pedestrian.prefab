@@ -1877,6 +1877,7 @@ GameObject:
   - component: {fileID: 4143301993281372649}
   - component: {fileID: 8679538564190978093}
   - component: {fileID: 6264143353743346723}
+  - component: {fileID: 2884907408598842551}
   m_Layer: 8
   m_Name: Pedestrian
   m_TagString: Player
@@ -1997,6 +1998,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05812e307db74052a542f9f89d240225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2884907408598842551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943369909525883156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a655ae831f4091b6b42d56200a0b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 0.7
+  maxScale: 1
 --- !u!1 &5981553892397062754
 GameObject:
   m_ObjectHideFlags: 0
