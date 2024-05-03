@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Computer
   m_EditorClassIdentifier: 
   displayName: Find the Computer
-  type: {fileID: 11400000, guid: 4d287c5eb98124515a239973c71063cf, type: 2}
-  amount: 1
+  requirements:
+  - type: {fileID: 11400000, guid: 4d287c5eb98124515a239973c71063cf, type: 2}
+    amount: 1

@@ -79,9 +79,8 @@ public class StoryView : MonoBehaviour
             string text = story.Continue();
             // This removes any white space from the text.
             text = text.Trim();
-            // Display the text on screen!
-            CreateContentView(text);
-            HandleTags();
+            CreateContentView(text); // Display the text on screen!
+            HandleTags(); // For example: give new quests
         }
 
         if (story.currentChoices.Count > 0)
