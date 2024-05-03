@@ -1,8 +1,5 @@
-namespace DefaultNamespace
+public interface IQuest
 {
-    public interface IQuest
-    {
-        public string GetId();
-        string GetDisplayName();
-    }
+    public string GetId();
+    string GetDisplayName();
 }
