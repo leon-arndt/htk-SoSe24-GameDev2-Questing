@@ -1,3 +1,4 @@
+using StarterAssets;
 using UnityEngine;
 
 public class TimeAgent : MonoBehaviour
@@ -20,10 +21,14 @@ public class TimeAgent : MonoBehaviour
     private void SpeedUp()
     {
         Time.timeScale *= factor;
+        GetComponent<ThirdPersonController>().SprintSpeed /= factor / 2;
+        GetComponent<ThirdPersonController>().MoveSpeed /= factor / 2;
     }
 
     private void SlowDown()
     {
         Time.timeScale /= factor;
+        GetComponent<ThirdPersonController>().SprintSpeed *= factor / 2;
+        GetComponent<ThirdPersonController>().MoveSpeed *= factor / 2;
     }
 }
