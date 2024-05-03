@@ -6,13 +6,20 @@ public class NavMeshFollower : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float minDistance = 5f;
+    [SerializeField] private float maxDistance = 50f;
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, target.position) < minDistance)
+        var distance = Vector3.Distance(transform.position, target.position);
+        if (distance < minDistance)
         {
             agent.isStopped = true;
             return;
+        }
+        
+        if (distance > maxDistance)
+        {
+            agent.isStopped = true;
         }
 
         agent.isStopped = false;
