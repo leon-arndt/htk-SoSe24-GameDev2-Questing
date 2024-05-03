@@ -12,7 +12,7 @@ public static class QuestSystem
             {
                 foreach (var requirement in collectionQuest.requirements)
                 {
-                    if (GameState.GetAllItems().TryGetValue(type, out var itemAmount))
+                    if (GameState.GetAllItems().TryGetValue(requirement.type, out var itemAmount))
                     {
                         if (itemAmount < requirement.amount)
                         {
