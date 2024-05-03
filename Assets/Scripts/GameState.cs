@@ -106,17 +106,17 @@ public class GameState : MonoBehaviour
         var instance = FindObjectOfType<GameState>();
         return instance._questStates;
     }
-}
-
-public struct QuestState
-{
-    public IQuest Quest;
-    public QuestStatus Status;
-};
-
-public enum QuestStatus
-{
-    Started,
-    Completable,
-    Completed
+    
+    public struct QuestState
+    {
+        public IQuest Quest;
+        public QuestStatus Status;
+    };
+    
+    public enum QuestStatus
+    {
+        Started,
+        Completable,
+        Completed
+    }
 }
