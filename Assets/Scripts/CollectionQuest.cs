@@ -1,11 +1,12 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
 public class CollectionQuest : ScriptableObject, IQuest
 {
     public string displayName;
-    public ItemType type;
-    public uint amount = 1;
+    public List<ItemRequirement> requirements;
 
     public string GetId()
     {
@@ -15,5 +16,12 @@ public class CollectionQuest : ScriptableObject, IQuest
     public string GetDisplayName()
     {
         return displayName;
+    }
+
+    [Serializable]
+    public class ItemRequirement
+    {
+        public ItemType type;
+        public uint amount = 1;
     }
 }

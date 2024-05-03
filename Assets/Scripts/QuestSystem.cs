@@ -8,18 +8,27 @@ public static class QuestSystem
         var activeQuests = GameState.GetActiveQuests();
         foreach (var quest in activeQuests.ToList())
         {
-            if (quest.Quest is CollectionQuest collectionQuest && collectionQuest.type == type)
+            if (quest.Quest is CollectionQuest collectionQuest)
             {
-                if (GameState.GetAllItems().TryGetValue(type, out var itemAmount))
+                foreach (var requirement in collectionQuest.requirements)
                 {
-                    if (itemAmount >= collectionQuest.amount)
+                    if (GameState.GetAllItems().TryGetValue(type, out var itemAmount))
                     {
-                        GameState.MarkCompletable(collectionQuest);
+                        if (itemAmount < requirement.amount)
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        return;
                     }
                 }
-            }   
+                
+                GameState.MarkCompletable(collectionQuest);
+            }
         }
-        
+
         Object.FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
     }
 }
