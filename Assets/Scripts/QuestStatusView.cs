@@ -1,5 +1,4 @@
 using System.Linq;
-using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 

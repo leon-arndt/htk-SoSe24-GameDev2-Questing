@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using DefaultNamespace;
 using DG.Tweening;
 using Ink.Runtime;
 using TMPro;

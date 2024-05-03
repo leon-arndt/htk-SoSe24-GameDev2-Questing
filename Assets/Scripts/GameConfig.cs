@@ -1,10 +1,7 @@
 using UnityEngine;
 
-namespace DefaultNamespace
+[CreateAssetMenu]
+public class QuestsConfig : ScriptableObject
 {
-    [CreateAssetMenu]
-    public class QuestsConfig : ScriptableObject
-    {
-        public CollectionQuest[] quests;
-    }
+    public CollectionQuest[] quests;
 }
