@@ -177,7 +177,6 @@ public class StoryView : MonoBehaviour
         if (index == 0)
         {
             choice.Select();
-            choice.navigation = new Navigation {mode = Navigation.Mode.Vertical, selectOnDown = choice};
         }
         choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
 

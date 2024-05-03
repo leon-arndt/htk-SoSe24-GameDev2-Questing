@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
@@ -13,17 +13,21 @@ public class PauseMenu : MonoBehaviour
         continueButton.onClick.AddListener(() => SetPausedStatus(false));
     }
 
-    private void OnEnable()
-    {
-        continueButton.Select();
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             var wasPreviouslyPaused = pausePanel.activeSelf;
             SetPausedStatus(!wasPreviouslyPaused);
+        }
+
+
+        if (pausePanel.activeInHierarchy)
+        {
+            if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                continueButton.Select();
+            } 
         }
     }
 
@@ -33,5 +37,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = isPaused ? 0 : 1;
         Cursor.visible = isPaused;
         Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+        
+        if (isPaused)
+        {
+            continueButton.Select();
+        }
     }
 }
