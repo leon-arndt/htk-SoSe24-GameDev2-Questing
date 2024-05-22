@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858b41307ac984d33aed1caeec7926c2, type: 3}
   m_Name: Currency
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: f10a870d0c3414f50944acdf161b27dd, type: 3}

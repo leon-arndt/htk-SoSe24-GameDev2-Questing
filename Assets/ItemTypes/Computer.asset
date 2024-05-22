@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858b41307ac984d33aed1caeec7926c2, type: 3}
   m_Name: Computer
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 19c290057f4424b2eae311c20b4383f6, type: 3}

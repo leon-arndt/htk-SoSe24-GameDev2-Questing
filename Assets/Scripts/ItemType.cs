@@ -6,4 +6,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ItemType : ScriptableObject
 {
+    public Sprite icon;
 }
