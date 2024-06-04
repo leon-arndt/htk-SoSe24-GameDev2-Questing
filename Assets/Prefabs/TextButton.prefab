@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 4401846943308980778}
   - component: {fileID: 2979589233998023818}
   - component: {fileID: 1342221819766736873}
+  - component: {fileID: 7328642007270562346}
   m_Layer: 5
   m_Name: TextButton
   m_TagString: Untagged
@@ -506,3 +507,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7328642007270562346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666517704999746833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657ce692371d428aa92dc38186fbbf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
