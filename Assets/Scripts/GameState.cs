@@ -80,6 +80,19 @@ public class GameState : MonoBehaviour
         Debug.Log("Quest " + questId + " removed");
     }
 
+    public static void CompleteQuest(string questId)
+    {
+        var instance = FindObjectOfType<GameState>();
+        var match = instance._questStates.Find(q => q.Quest.GetId() == questId);
+        match.Status = QuestStatus.Completed;
+        var index = instance._questStates.FindIndex(q => q.Quest.GetId() == questId);
+        if (index >= 0 && index < instance._questStates.Count)
+        {
+            instance._questStates[index] = match;
+        }
+        Debug.Log("Quest " + questId + " completed");
+    }
+
     public static void MarkQuestCompletable(IQuest quest)
     {
         var instance = FindObjectOfType<GameState>();

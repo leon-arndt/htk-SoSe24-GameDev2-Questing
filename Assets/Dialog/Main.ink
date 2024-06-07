@@ -1,5 +1,6 @@
 ﻿# speaker: Slim
 VAR finished_computer = false
+VAR active_computer = false
 
 There was an accident.
 
@@ -21,6 +22,6 @@ Talk to me again when you do care.
 -> END
 
 === FoundComputer ===
-# removeQuest Computer
+# completeQuest Computer
 Good job. I'll take that from you.
     -> END

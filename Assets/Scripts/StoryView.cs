@@ -55,6 +55,15 @@ public class StoryView : MonoBehaviour
             story.variablesState["finished_"+quest.Quest.GetId().ToLower()] = true;
         }
         
+        foreach (var quest in GameState.GetActiveQuests())
+        {
+            var varName = "active_" + quest.Quest.GetId().ToLower();
+            if (story.variablesState.Contains(varName))
+            {
+                story.variablesState[varName] = true;
+            }
+        }
+        
         ShowStory();
     }
     
@@ -121,6 +130,13 @@ public class StoryView : MonoBehaviour
             {
                 var questName = currentTag.Split(' ')[1];
                 GameState.RemoveQuest(questName);
+                FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
+            }
+            
+            if (currentTag.Contains("completeQuest"))
+            {
+                var questName = currentTag.Split(' ')[1];
+                GameState.CompleteQuest(questName);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
         }
