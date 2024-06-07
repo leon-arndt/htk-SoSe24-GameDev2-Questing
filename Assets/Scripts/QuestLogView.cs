@@ -7,11 +7,13 @@ public class QuestLogView : MonoBehaviour
 
     public void ShowActiveQuests()
     {
+        // delete the outdated quests
         foreach (Transform child in questsHolder)
         {
             Destroy(child.gameObject);
         }
 
+        // create + show the current quests
         var activeQuests = GameState.GetActiveQuests();
         foreach (var quest in activeQuests)
         {

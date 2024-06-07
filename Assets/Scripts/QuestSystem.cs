@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class QuestSystem
 {
-    public static void UpdateQuests(ItemType type)
+    public static void UpdateQuests()
     {
         var activeQuests = GameState.GetActiveQuests();
         foreach (var quest in activeQuests.ToList())

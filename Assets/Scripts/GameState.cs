@@ -15,7 +15,7 @@ public class GameState : MonoBehaviour
             instance._items[type] += amount;
         }
         
-        QuestSystem.UpdateQuests(type);
+        QuestSystem.UpdateQuests(); // TODO with class
     }
 
     public static bool TryRemoveItem(ItemType type, uint amount)
