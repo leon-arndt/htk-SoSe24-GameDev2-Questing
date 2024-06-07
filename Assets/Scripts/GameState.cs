@@ -77,7 +77,7 @@ public class GameState : MonoBehaviour
         instance._questStates.Remove(match);
     }
 
-    public static void MarkCompletable(IQuest quest)
+    public static void MarkQuestCompletable(IQuest quest)
     {
         var instance = FindObjectOfType<GameState>();
         var match = instance._questStates.Find(q => q.Quest.GetId() == quest.GetId());

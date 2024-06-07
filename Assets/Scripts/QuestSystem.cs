@@ -25,7 +25,7 @@ public static class QuestSystem
                     }
                 }
                 
-                GameState.MarkCompletable(collectionQuest);
+                GameState.MarkQuestCompletable(collectionQuest);
             }
         }
 
