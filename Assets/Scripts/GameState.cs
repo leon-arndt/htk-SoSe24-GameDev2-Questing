@@ -15,7 +15,7 @@ public class GameState : MonoBehaviour
             instance._items[type] += amount;
         }
         
-        QuestSystem.UpdateQuests(); // TODO with class
+        QuestSystem.UpdateQuests();
     }
 
     public static bool TryRemoveItem(ItemType type, uint amount)
@@ -68,6 +68,7 @@ public class GameState : MonoBehaviour
             Status = QuestStatus.Started,
         };
         instance._questStates.Add(state);
+        Debug.Log("Quest " + quest.GetId() + " started");
     }
 
     public static void RemoveQuest(string questId)
@@ -75,6 +76,7 @@ public class GameState : MonoBehaviour
         var instance = FindObjectOfType<GameState>();
         var match = instance._questStates.Find(q => q.Quest.GetId() == questId);
         instance._questStates.Remove(match);
+        Debug.Log("Quest " + questId + " removed");
     }
 
     public static void MarkQuestCompletable(IQuest quest)
@@ -86,6 +88,7 @@ public class GameState : MonoBehaviour
         if (index >= 0 && index < instance._questStates.Count)
         {
             instance._questStates[index] = match;
+            Debug.Log(quest.GetId() + " is now completable");
         }
     }
     

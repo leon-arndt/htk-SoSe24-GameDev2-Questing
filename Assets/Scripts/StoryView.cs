@@ -55,6 +55,11 @@ public class StoryView : MonoBehaviour
             story.variablesState["finished_"+quest.Quest.GetId().ToLower()] = true;
         }
         
+        foreach (var quest in GameState.GetActiveQuests())
+        {
+            story.variablesState["started_"+quest.Quest.GetId().ToLower()] = true;
+        }
+        
         ShowStory();
     }
     
