@@ -69,6 +69,7 @@ public class GameState : MonoBehaviour
         };
         instance._questStates.Add(state);
         Debug.Log("Quest " + quest.GetId() + " started");
+        QuestSystem.UpdateQuests();
     }
 
     public static void RemoveQuest(string questId)
