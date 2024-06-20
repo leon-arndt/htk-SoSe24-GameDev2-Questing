@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{fa4730e6-87da-4e35-807f-88c40415915c}">
+		<property name="name">
+			<value>Scene</value>
+		</property>
+		<relationship name="folder">
+			<destination>{17bef02f-1cd8-4f8a-9081-8bd4e43c62dd}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{eab1f6bb-2022-4d13-b324-d84c1130d40b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{eab1f6bb-2022-4d13-b324-d84c1130d40b}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Menu</value>
+			<value>Level</value>
+			<value>EndCutscene</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

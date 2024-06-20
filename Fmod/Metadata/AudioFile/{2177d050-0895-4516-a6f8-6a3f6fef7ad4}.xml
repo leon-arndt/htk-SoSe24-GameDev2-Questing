@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2177d050-0895-4516-a6f8-6a3f6fef7ad4}">
+		<property name="assetPath">
+			<value>SFX/Environment/atmo-generic-generic-thunder-oneshot-distant-03.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16.02</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8108d672-6b7b-4638-99f3-9d698edc43f9}</destination>
+		</relationship>
+	</object>
+</objects>

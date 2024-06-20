@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DAWProject" id="{c23978b1-e470-49f2-a5bc-fd05a5e71ad3}">
+		<property name="assetPath">
+			<value>Footsteps/Footsteps.rpp.link/</value>
+		</property>
+		<property name="dawProjectPath">
+			<value>C:/Users/mindv/Music/Htk Game Audio SoSe 2024/Reaper Projects/Footsteps/Footsteps.rpp</value>
+		</property>
+		<property name="renderedAssetsPath">
+			<value>Render</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8108d672-6b7b-4638-99f3-9d698edc43f9}</destination>
+		</relationship>
+	</object>
+</objects>

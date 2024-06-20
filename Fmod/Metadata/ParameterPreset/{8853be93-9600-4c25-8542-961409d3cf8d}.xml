@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8853be93-9600-4c25-8542-961409d3cf8d}">
+		<property name="name">
+			<value>Day - Night</value>
+		</property>
+		<relationship name="folder">
+			<destination>{17bef02f-1cd8-4f8a-9081-8bd4e43c62dd}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{18ba93ac-e29b-4df1-9a1a-48f1a6a8fa9e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{18ba93ac-e29b-4df1-9a1a-48f1a6a8fa9e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.10999999940395355</value>
+		</property>
+	</object>
+</objects>

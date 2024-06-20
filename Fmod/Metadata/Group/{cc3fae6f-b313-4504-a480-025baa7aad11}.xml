@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{cc3fae6f-b313-4504-a480-025baa7aad11}">
+		<property name="name">
+			<value>Game Pause</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{16c0a92d-330b-40ee-a65b-ad4acd4001c1}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{6b38b8d6-6c0c-42cf-a5cf-8dc7429c9d41}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{eefce651-a28f-4cf8-b1a0-8b426747e60c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{16c0a92d-330b-40ee-a65b-ad4acd4001c1}">
+		<relationship name="effects">
+			<destination>{a17f14f3-2cde-4070-b8d8-893ec3a189fc}</destination>
+			<destination>{db56d708-706b-4311-8c92-2aeb1668c517}</destination>
+			<destination>{00b6a8ba-1fe3-4471-8354-0e2ef516c24b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{6b38b8d6-6c0c-42cf-a5cf-8dc7429c9d41}" />
+	<object class="LowpassSimpleEffect" id="{a17f14f3-2cde-4070-b8d8-893ec3a189fc}">
+		<property name="cutoff">
+			<value>22000</value>
+		</property>
+	</object>
+	<object class="HighpassSimpleEffect" id="{db56d708-706b-4311-8c92-2aeb1668c517}">
+		<property name="cutoff">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{00b6a8ba-1fe3-4471-8354-0e2ef516c24b}" />
+</objects>

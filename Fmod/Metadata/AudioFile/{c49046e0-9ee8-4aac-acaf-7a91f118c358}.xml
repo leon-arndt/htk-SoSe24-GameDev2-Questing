@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c49046e0-9ee8-4aac-acaf-7a91f118c358}">
+		<property name="assetPath">
+			<value>SFX/Animals/animal-frog-frog-call-croak-04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.6619791666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8108d672-6b7b-4638-99f3-9d698edc43f9}</destination>
+		</relationship>
+	</object>
+</objects>
