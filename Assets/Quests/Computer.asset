@@ -16,3 +16,4 @@ MonoBehaviour:
   requirements:
   - type: {fileID: 11400000, guid: 4d287c5eb98124515a239973c71063cf, type: 2}
     amount: 1
+  isHidden: 1

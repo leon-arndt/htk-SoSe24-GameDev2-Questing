@@ -132,8 +132,8 @@ public class GameState : MonoBehaviour
     
     public enum QuestStatus
     {
-        Started,
-        Completable,
-        Completed
+        Started = 0,
+        Completable = 1,
+        Completed = 2
     }
 }
