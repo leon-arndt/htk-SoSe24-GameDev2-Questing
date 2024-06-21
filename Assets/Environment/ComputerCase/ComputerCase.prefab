@@ -650,6 +650,7 @@ GameObject:
   - component: {fileID: 4787424087566481303}
   - component: {fileID: 5121905654470204153}
   - component: {fileID: 5163185710551290284}
+  - component: {fileID: 7839962310411639176}
   m_Layer: 0
   m_Name: ComputerCase
   m_TagString: Untagged
@@ -708,6 +709,37 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.025
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7839962310411639176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637132515706165084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 228148478
+      Data2: 1201539668
+      Data3: -2038573134
+      Data4: 621535420
+    Path: event:/SFX/Pickups/SFX_CoinPickup
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &741292862824339947
 GameObject:
   m_ObjectHideFlags: 0
