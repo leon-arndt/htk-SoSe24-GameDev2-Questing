@@ -20,8 +20,8 @@
 		</property>
 		<property name="enumerationLabels">
 			<value>Concrete</value>
-			<value>Leaves</value>
-			<value>Forest</value>
+			<value>Gravel</value>
+			<value>WoodFloor</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

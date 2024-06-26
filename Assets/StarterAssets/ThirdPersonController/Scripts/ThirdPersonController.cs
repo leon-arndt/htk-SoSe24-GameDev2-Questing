@@ -1,4 +1,5 @@
-﻿ using UnityEngine;
+﻿ using JetBrains.Annotations;
+ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -369,16 +370,19 @@ namespace StarterAssets
                 GroundedRadius);
         }
 
+        [UsedImplicitly]
         private void OnFootstep(AnimationEvent animationEvent)
         {
-            if (animationEvent.animatorClipInfo.weight > 0.5f)
+            GetComponent<FootstepSounds>().PlayFootstep();
+            // below is the Unity way of playing sounds
+            /*if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 if (FootstepAudioClips.Length > 0)
                 {
                     var index = Random.Range(0, FootstepAudioClips.Length);
                     AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
                 }
-            }
+            }*/
         }
 
         private void OnLand(AnimationEvent animationEvent)
