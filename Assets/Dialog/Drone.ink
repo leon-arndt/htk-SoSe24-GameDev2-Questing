@@ -1,5 +1,5 @@
 ﻿# speaker: Mine Drone
-VAR finished_gasleak = false
+VAR completable_gasleak = false
 
 Greetings. An anomaly has been detected within the operational parameters, prompting immediate attention.
 
@@ -7,7 +7,7 @@ Greetings. An anomaly has been detected within the operational parameters, promp
 -> AskWhatProblem
 * "I'm currently occupied."
 -> Ignore
-* {finished_gasleak} "I've pinpointed the origin of the gas leak."
+* {completable_gasleak} "I've pinpointed the origin of the gas leak."
 -> FoundGasLeak
 
 === AskWhatProblem ===

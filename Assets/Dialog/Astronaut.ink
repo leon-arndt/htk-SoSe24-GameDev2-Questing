@@ -1,5 +1,5 @@
 ﻿# speaker: Astronaut
-VAR finished_passport = false
+VAR completable_passport = false
 
 There's been a mishap.
 
@@ -7,7 +7,7 @@ There's been a mishap.
 -> AskWhatHappened
 * "I'm not interested."
 -> Ignore
-* {finished_passport} "I've located the passport."
+* {completable_passport} "I've located the passport."
 -> FoundPassport
 
 === AskWhatHappened ===

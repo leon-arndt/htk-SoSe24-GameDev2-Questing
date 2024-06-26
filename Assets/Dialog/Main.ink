@@ -1,5 +1,5 @@
 ﻿# speaker: Slim
-VAR finished_computer = false
+VAR completable_computer = false
 VAR active_computer = false
 
 There was an accident.
@@ -8,7 +8,7 @@ There was an accident.
     -> AskWhatSee
 * "I don't care"
     -> Cancel
-* {finished_computer} "I found the computer"
+* {completable_computer} "I found the computer"
     -> FoundComputer
 
 === AskWhatSee ===
