@@ -19,7 +19,12 @@ public class QuestLogView : MonoBehaviour
         {
             if (quest.Status == GameState.QuestStatus.Completed)
             {
-                continue;
+                continue; // skip completed quests
+            }
+
+            if (quest.Quest.IsHidden())
+            {
+                continue; // skip hidden quests
             }
 
             var questView = Instantiate(questViewPrefab, questsHolder);
