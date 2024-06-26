@@ -16347,7 +16347,7 @@ MonoBehaviour:
       Data2: 1096667951
       Data3: -492061505
       Data4: -1085360260
-    Path: event:/Music/OST_CozyGame
+    Path: event:/Music/Music
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -17717,12 +17717,12 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.989224
+      value: 1.9892229
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.661167
+      value: 47.66116
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -18689,12 +18689,12 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.989224
+      value: 1.9892229
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.661167
+      value: 47.66116
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -24465,6 +24465,7 @@ GameObject:
   - component: {fileID: 1979174052}
   - component: {fileID: 1979174053}
   - component: {fileID: 1979174054}
+  - component: {fileID: 1979174055}
   m_Layer: 0
   m_Name: GearRoomArea
   m_TagString: Untagged
@@ -24521,6 +24522,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15, y: 15, z: 15}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1979174055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979174051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -1058631548
+      Data2: 1096667951
+      Data3: -492061505
+      Data4: -1085360260
+    Path: event:/Music/OST_CozyGame
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: Scene
+    Value: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1979352518
 PrefabInstance:
   m_ObjectHideFlags: 0
