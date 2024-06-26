@@ -1,7 +1,19 @@
 ﻿# speaker: Slim
 VAR completable_computer = false
-VAR active_computer = false
+VAR completed_computer = false
 
+Hello detective.
+* {completed_computer} "Can I help with anything else?"
+    -> AfterFinish
+* {not completed_computer} "What happened boss?"
+    -> FirstTime
+
+=== AfterFinish ===
+Not right now. I will let you know if I need anything else.
+-> END
+
+
+=== FirstTime ===
 There was an accident.
 
 * "What did you see?"

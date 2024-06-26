@@ -59,6 +59,15 @@ public class StoryView : MonoBehaviour
             }
         }
         
+        foreach (var quest in GameState.GetCompletedQuests())
+        {
+            var varName = "completed_" + quest.Quest.GetId().ToLower();
+            if (story.variablesState.Contains(varName))
+            {
+                story.variablesState[varName] = true;
+            }
+        }
+        
         foreach (var quest in GameState.GetActiveQuests())
         {
             var varName = "active_" + quest.Quest.GetId().ToLower();
