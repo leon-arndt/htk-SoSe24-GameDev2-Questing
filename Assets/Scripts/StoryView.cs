@@ -142,7 +142,7 @@ public class StoryView : MonoBehaviour
             if (currentTag.Contains("addQuest"))
             {
                 var questName = currentTag.Split(' ')[1];
-                var quest = _quests.First(q => q.GetId() == questName);
+                var quest = _quests.First(q => q.GetId().ToLower() == questName.ToLower());
                 GameState.StartQuest(quest);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
