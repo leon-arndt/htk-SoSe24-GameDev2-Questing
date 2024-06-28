@@ -12,6 +12,13 @@ public class VolumeSlider : MonoBehaviour
       GetComponent<Slider>().onValueChanged.AddListener(SetVolume);
     }
 
+    private void OnEnable()
+    {
+        var vca = FMODUnity.RuntimeManager.GetVCA(vcaPath);
+        vca.getVolume(out var volume);
+        GetComponent<Slider>().value = volume;
+    }
+
     private void OnDestroy()
     {
         GetComponent<Slider>().onValueChanged.RemoveListener(SetVolume);

@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>ATMO</value>
 		</property>
+		<relationship name="masters">
+			<destination>{a4118ff8-614f-4fa4-bcec-ab60dac9369f}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{3f9e724b-32a2-4cd0-84d3-bdfcb8d76e52}</destination>
 		</relationship>

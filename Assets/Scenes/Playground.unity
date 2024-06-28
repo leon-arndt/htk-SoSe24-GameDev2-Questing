@@ -9411,6 +9411,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5098128634894958038, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
+        type: 3}
+      propertyPath: vcaPath
+      value: vca:/Music
+      objectReference: {fileID: 0}
     - target: {fileID: 5206281180424222902, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -25200,6 +25205,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5098128634894958038, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
+        type: 3}
+      propertyPath: vcaPath
+      value: vca:/SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 5206281180424222902, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -27144,6 +27154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098128634894958038, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
+        type: 3}
+      propertyPath: vcaPath
+      value: vca:/Master
       objectReference: {fileID: 0}
     - target: {fileID: 5206281180424222902, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
