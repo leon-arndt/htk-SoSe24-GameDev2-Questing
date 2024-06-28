@@ -5,6 +5,7 @@ using System.Linq;
 using DG.Tweening;
 using Ink.Runtime;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -16,13 +17,13 @@ public class StoryView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
-    [SerializeField] private QuestsConfig questConfig;
     [SerializeField] private GameObject normalHudGroup;
     [SerializeField] private Image speakerImage;
     
     [SerializeField] private List<SpeakerConfig> speakerConfigs;
 
     private UnityAction _onFinished;
+    private List<IQuest> _quests;
 
     [Serializable]
     public class SpeakerConfig
@@ -37,6 +38,13 @@ public class StoryView : MonoBehaviour
     {
         DestroyOldChoices();
         gameObject.SetActive(false);
+
+        CollectionQuest[] collectionQuests = Resources.LoadAll<CollectionQuest>("Quests");
+        _quests = new List<IQuest>();
+        foreach (var collectionQuest in collectionQuests)
+        {
+            _quests.Add(collectionQuest);
+        }
     }
 
     public void StartStory(TextAsset textAsset, UnityAction onFinished)
@@ -134,7 +142,7 @@ public class StoryView : MonoBehaviour
             if (currentTag.Contains("addQuest"))
             {
                 var questName = currentTag.Split(' ')[1];
-                var quest = questConfig.quests.First(q => q.GetId() == questName);
+                var quest = _quests.First(q => q.GetId() == questName);
                 GameState.StartQuest(quest);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
