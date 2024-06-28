@@ -189,7 +189,7 @@ public class StoryView : MonoBehaviour
                 storyText.maxVisibleCharacters = text.Length;
                 yield break;
             }
-            yield return new WaitForSeconds(0.02f); // wir könnten auch 1 sekunde warten, das wäre sehr langsam
+            yield return new WaitForSeconds(0.015f); // wir könnten auch 1 sekunde warten, das wäre sehr langsam
         }
     }
     
