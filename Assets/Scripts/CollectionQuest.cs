@@ -7,8 +7,8 @@ public class CollectionQuest : ScriptableObject, IQuest
 {
     public string displayName;
     public List<ItemRequirement> requirements;
-    public bool isHidden;
-    public GameObject completeScreenPrefab;
+    public bool isHidden; // hide this quest in the quest log UI
+    public GameObject completeScreenPrefab; // this is null by default. Optionally: a screen
 
     public string GetId()
     {
@@ -25,7 +25,7 @@ public class CollectionQuest : ScriptableObject, IQuest
         return displayName;
     }
 
-    public GameObject CompleteScreenPrefab()
+    public GameObject GetCompleteScreenPrefab()
     {
         return completeScreenPrefab;
     }

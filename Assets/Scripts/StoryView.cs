@@ -23,7 +23,6 @@ public class StoryView : MonoBehaviour
     [SerializeField] private List<SpeakerConfig> speakerConfigs;
 
     private UnityAction _onFinished;
-    private List<IQuest> _quests;
 
     [Serializable]
     public class SpeakerConfig
@@ -33,6 +32,7 @@ public class StoryView : MonoBehaviour
     }
 
     private Story story;
+    private List<IQuest> _quests;
 
     private void Awake()
     {

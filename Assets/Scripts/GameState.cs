@@ -90,11 +90,12 @@ public class GameState : MonoBehaviour
         {
             instance._questStates[index] = match;
         }
-        
-        if (match.Quest.CompleteScreenPrefab() != null)
+
+        var uiPrefab = match.Quest.GetCompleteScreenPrefab(); 
+        if (uiPrefab != null)
         {
             var root = FindObjectOfType<UiRoot>().transform;
-            Instantiate(match.Quest.CompleteScreenPrefab(), root);
+            Instantiate(uiPrefab, root);
         }
         Debug.Log("Quest " + questId + " completed");
     }
