@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8579082976218641296}
   - component: {fileID: 6183266364623735985}
   - component: {fileID: 13784354862340905}
+  - component: {fileID: 1539716179364974236}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -78,6 +79,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1539716179364974236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572337486025613551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcbf06059874968bdc2432dc8b709a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton: {fileID: 5082179135475091141}
 --- !u!1 &1772318809572555895
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +480,7 @@ PrefabInstance:
     - target: {fileID: 6666517704999746833, guid: f918adfb8166e44ca9099bf9e4a0e54c,
         type: 3}
       propertyPath: m_Name
-      value: HomeButton
+      value: MainMenuButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -499,5 +513,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c1d1eed627f49179eca9ee197d7ea21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5082179135475091141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2979589233998023818, guid: f918adfb8166e44ca9099bf9e4a0e54c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8060922578608507471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3700301827749607262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
