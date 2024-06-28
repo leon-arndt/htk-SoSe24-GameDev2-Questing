@@ -408,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 4730899030084324691, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
       propertyPath: m_Name
-      value: VolumeSlider
+      value: MasterVolumeSlider
       objectReference: {fileID: 0}
     - target: {fileID: 4780569639144959343, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
@@ -693,7 +693,7 @@ PrefabInstance:
     - target: {fileID: 4730899030084324691, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
       propertyPath: m_Name
-      value: VolumeSlider (2)
+      value: MusicVolumeSlider
       objectReference: {fileID: 0}
     - target: {fileID: 4780569639144959343, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
@@ -837,7 +837,7 @@ PrefabInstance:
     - target: {fileID: 4730899030084324691, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
       propertyPath: m_Name
-      value: VolumeSlider (1)
+      value: SfxVolumeSlider
       objectReference: {fileID: 0}
     - target: {fileID: 4780569639144959343, guid: 9e055f5f6b1494e3ea5ccc210d212e1b,
         type: 3}
